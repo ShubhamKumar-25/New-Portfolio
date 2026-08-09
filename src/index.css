@@ -1,0 +1,60 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  /* Core brand palette - unified across the whole site */
+  --color-bg: rgb(13, 16, 20);
+  --color-bg-alt: rgb(19, 23, 28);
+  --color-surface: rgb(22, 26, 32);
+  --color-primary: rgb(66, 174, 217);      /* cyan-blue accent */
+  --color-primary-light: rgb(120, 210, 240);
+  --color-accent: rgb(245, 166, 35);       /* warm CTA color for buttons that must pop */
+  --color-accent-hover: rgb(255, 189, 82);
+  --color-text: rgb(240, 244, 248);
+  --color-text-muted: rgb(163, 176, 189);
+  --color-border: rgba(66, 174, 217, 0.25);
+  --gradient-primary: linear-gradient(to right, var(--color-primary), #ffffff);
+  --shadow-glow: 0 0 25px rgba(66, 174, 217, 0.25);
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #0d1014;
+}
+
+/* Global scrollbar polish */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}

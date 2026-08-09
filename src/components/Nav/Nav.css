@@ -1,0 +1,145 @@
+
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(13, 16, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: var(--color-accent);
+  color: #1a1300;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-resume-btn:hover {
+  background: transparent;
+  color: var(--color-accent-hover);
+  border: 1px solid var(--color-accent-hover);
+}
+
+
+
+.active{
+    color: var(--color-primary);
+    border-bottom: 1px solid white;
+}
+nav ul a{
+    cursor: pointer;
+}
+nav ul a:hover{
+    color: var(--color-primary);
+    border-bottom: 1px solid white;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color: white;
+    gap: 20px;
+    font-size: 20px;
+}
+
+nav h1{
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(66, 180, 205),white);
+    background-clip: text;
+    color: transparent;
+}
+
+.hemburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-direction: column;
+    display: none;
+}
+
+.ham{
+    width: 40px;
+    height: 2px;
+    background-color: antiquewhite;
+    transition: 0.5s;
+}
+
+.mobilemenu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(22, 25, 30, 0.471);
+    backdrop-filter: blur(7px);
+    right: 0;
+    transform: translate(100%);
+    flex-direction: column;
+    transition: all 0.5s;
+    gap: 50px;
+}
+
+.activemobile{
+    transform: translate(0%);
+}
+
+.activeham .ham:nth-child(1){
+    transform: rotate(45deg);
+    position: relative;
+    top: 11px;
+}
+.activeham .ham:nth-child(2){
+    opacity: 0;
+}
+.activeham .ham:nth-child(3){
+    transform: rotate(-45deg);
+    position: relative;
+    top: -12px;
+}
+
+@media (max-width:750px) {
+    .desktopmenu{
+        display: none;
+    }
+    .hemburger{
+        display: flex;
+    }
+    nav {
+      padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+      font-size: 22px;
+    }
+    .nav-resume-btn span {
+      display: none;
+    }
+    .nav-resume-btn {
+      padding: 8px 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-resume-btn {
+      display: none;
+    }
+}

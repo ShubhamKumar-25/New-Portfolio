@@ -1,0 +1,198 @@
+
+.card {
+  width: 400px;
+  height: 170px;
+  background-color: var(--color-surface, rgb(17, 17, 17));
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+  padding: 10px;
+  border: 1px solid var(--color-border, rgba(66, 174, 217, 0.15));
+}
+
+/* project ke liye bigger */
+.project-card {
+  height: 260px;
+}
+
+.card h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(
+    to right,
+    rgb(68, 155, 190),
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.card:hover h1 {
+  opacity: 0;
+}
+
+.hovercard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(121, 205, 220, 0.486),
+    rgba(12, 17, 20, 0.495)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover .hovercard {
+  transform: translateY(0%);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 6px 20px rgba(66, 174, 217, 0.35),
+    var(--shadow-glow, 0 0 25px rgba(66, 174, 217, 0.25));
+}
+
+/* ===== Project overlay: description + Github/Live buttons ===== */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px;
+  background: linear-gradient(
+    to top,
+    rgba(6, 10, 14, 0.92) 10%,
+    rgba(6, 10, 14, 0.55) 55%,
+    rgba(6, 10, 14, 0.15) 100%
+  );
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.project-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #cfd8e0);
+  line-height: 1.35;
+  max-width: 90%;
+}
+
+.card-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-bg, #0d1014);
+  background: var(--color-primary, rgb(66, 174, 217));
+  border: 1px solid var(--color-primary, rgb(66, 174, 217));
+  transition: all 0.25s ease;
+}
+
+.card-link-btn:hover {
+  background: transparent;
+  color: var(--color-primary-light, rgb(120, 210, 240));
+  transform: scale(1.05);
+}
+
+.card-link-live {
+  background: var(--color-accent, rgb(245, 166, 35));
+  border-color: var(--color-accent, rgb(245, 166, 35));
+  color: #1a1300;
+}
+
+.card-link-live:hover {
+  background: transparent;
+  color: var(--color-accent-hover, rgb(255, 189, 82));
+}
+
+.card-link-soon {
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #9aa7b2);
+  font-style: italic;
+}
+
+@media (max-width: 750px) {
+  .card {
+    width: 300px;
+    height: 150px;
+  }
+  .project-card {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 250px;
+    height: 130px;
+  }
+  .project-card {
+    height: 220px;
+  }
+  .card h1 {
+    font-size: 1.2rem;
+  }
+  .card-link-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* about default image */
+.hovercard img {
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* project image full */
+.project-card .hovercard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .hovercard img {
+  transform: scale(1.08);
+}
