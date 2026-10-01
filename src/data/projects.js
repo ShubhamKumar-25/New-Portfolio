@@ -9,6 +9,7 @@ import food from "../assets/food.png";
 import expence from "../assets/expence.webp";
 import resume from "../assets/resume-ana.jpg";
 import nexai from '../assets/NexAI.png';
+import desiner from '../assets/Designer.jpg';
 
 const projects = [
   {
@@ -82,6 +83,14 @@ const projects = [
     description: "This is my own chat gpt his name is NexAI.",
     github: "https://github.com/ShubhamKumar-25/My-Own-Chat-Gpt-nexAI",
     live: "https://my-own-chat-gpt-nex-ai.vercel.app/chat",
+  },
+  {
+    id: 10,
+    title: "UI Designer",
+    image: desiner,
+    description: "Managing daily expenses manually or in a simple diary is annoying, and most of us forget where our money actually went at the end of the month.",
+    github: "https://github.com/ShubhamKumar-25/AI-Expense-Tracker",
+    live: "https://ai-expense-tracker-nine-xi.vercel.app",
   },
 
 ];
