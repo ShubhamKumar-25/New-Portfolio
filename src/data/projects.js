@@ -86,7 +86,7 @@ const projects = [
   },
   {
     id: 10,
-    title: "UI Designer",
+    title: "AI EXPENSE TRACKER",
     image: desiner,
     description: "Managing daily expenses manually or in a simple diary is annoying, and most of us forget where our money actually went at the end of the month.",
     github: "https://github.com/ShubhamKumar-25/AI-Expense-Tracker",
