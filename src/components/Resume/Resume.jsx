@@ -7,8 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Resume PDF lives at public/resume.pdf -> replace that file with your real resume
-// (keep the same filename) and this whole section updates automatically.
 const RESUME_PATH = "/Resume-2.pdf";
 
 const Resume = () => {

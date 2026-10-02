@@ -60,14 +60,14 @@ const projects = [
     github: "https://github.com/ShubhamKumar-25/food-delivery-app",
     live: "",
   },
-  {
-    id: 7,
-    title: "Expense Tracker",
-    image: expence,
-    description: "Track income and expenses with running balance and category breakdown.",
-    github: "https://github.com/ShubhamKumar-25/expense-tracker",
-    live: "",
-  },
+  // {
+  //   id: 7,
+  //   title: "Expense Tracker",
+  //   image: expence,
+  //   description: "Track income and expenses with running balance and category breakdown.",
+  //   github: "https://github.com/ShubhamKumar-25/expense-tracker",
+  //   live: "",
+  // },
   {
     id: 8,
     title: "Resume Builder",
